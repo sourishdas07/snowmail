@@ -12,3 +12,8 @@
 - Frontend: Next.js
 - Backend: NestJs
 - Database: Supabase
+
+# Tasks
+
+- Setup CRUD operations to database
+- Setup API endpoints in backend
