@@ -28,9 +28,6 @@ export default async function Index() {
           <DeployButton />
           {isSupabaseConnected && <AuthButton />}
         </div>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Login
-        </button>
       </nav>
 
       <main className="flex-1 flex flex-col bg-blue-100">
