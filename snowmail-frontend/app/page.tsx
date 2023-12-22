@@ -33,6 +33,7 @@ export default async function Index() {
           Login
         </button>
       </nav>
+      
 
       <main className="flex-1 flex flex-col bg-blue-100">
         <h2 className="font-bold text-4xl mb-4">Next steps</h2>
