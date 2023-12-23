@@ -17,5 +17,5 @@
 
 - Finish Figma Layout
 - Implement Figma layout for Main page, and home page of a user
-- Set up forms to collect information to store user info after sign up
-- Setup tables in database to store information collected during signup (Name, School, GPA, Resume, Recruiter email, Job description etc.)
+- Protect routes to signup page, and show signup page after signing up
+- Add ability to store resume in database
