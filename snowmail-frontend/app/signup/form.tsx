@@ -3,9 +3,12 @@ import { useState, FormEvent, ChangeEvent } from 'react';
 import { createClient } from '@supabase/supabase-js'
 
 interface FormData {
-  name: string;
+  firstname: string;
+  lastname: string;
+  email: string;
   school: string;
-  gpa: string;
+  major: string;
+  gpa: number;
   user: string;
 }
 
@@ -16,17 +19,18 @@ interface Props {
 export default function SignupForm(props : Props) {
 
   const [formData, setFormData] = useState<FormData>({
-    name: '',
+    firstname: '',
+    lastname: '',
+    email: '',
     school: '',
-    gpa: '',
+    major: '',
+    gpa: 0,
     user: props.userId,
   });
 
-
+  // Supabase
   const supabaseURL = process.env.NEXT_PUBLIC_SUPABASE_URL!;
   const supabaseAPI = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-
-
   const supabase = createClient(supabaseURL, supabaseAPI);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
