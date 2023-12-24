@@ -1,16 +1,19 @@
+import AuthButton from "./AuthButton";
 
 
-export default function Header() {
+export default function Navbar() {
   return (
-     <div className="flex justify-between items-center bg-grey p-4 w-full bg-blue-900">
-          {/* <nav className="flex justify-between items-center bg-grey p-4 w-full bg-blue-900"> */}
-        <div className="text-2xl font-bold">
-          Snowmail
-        </div>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Login
-        </button>
-      {/* </nav> */}
-     </div>
+    <div className="flex justify-between items-center px-20 py-2 bg-gradient-to-r from-sky-200 from-40% to-sky-100">
+      <div className="text-4xl font-bold text-gray-800">
+        Snowmail
+      </div>
+      <div className="flex space-x-24 text-white-800">
+        <a href="#" className="hover:underline">Invest</a>
+        <a href="#" className="hover:underline">Features</a>
+        <a href="#" className="hover:underline">Market</a>
+        <a href="#" className="hover:underline">About Us</a>
+      </div>
+      <AuthButton />
+    </div>
   )
 }

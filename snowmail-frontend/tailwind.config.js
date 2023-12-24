@@ -16,6 +16,9 @@ module.exports = {
           "background-hover": "hsl(var(--btn-background-hover))",
         },
       },
+      boxShadow: {
+        '3xl': '50px -50px 60px -10px rgba(0, 0, 0,0.7)',
+      }
     },
   },
   plugins: [],

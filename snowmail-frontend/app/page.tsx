@@ -4,6 +4,10 @@ import { createClient } from '@/utils/supabase/server'
 import Header from '@/components/Header'
 import { cookies } from 'next/headers'
 import FetchData from '@/components/FetchData'
+import Navbar from '@/components/Navbar'
+import Card from '@/components/Card'
+import Tagline from '@/components/Tagline'
+import UserReview from '@/components/UserReview'
 
 export default async function Index() {
   const cookieStore = cookies()
@@ -22,38 +26,25 @@ export default async function Index() {
   const isSupabaseConnected = canInitSupabaseClient()
 
   return (
-    <div className="flex-1 w-full flex flex-col">
+    <div className="flex-1 w-full flex flex-col bg-gradient-to-tr from-white from-35% to-sky-300">
 
       {/* Home Screen Navbar */}
-      <nav className="flex justify-between items-center bg-grey p-4 w-full bg-blue-900">
-        <div className="text-2xl font-bold">
-          Snowmail
-        </div>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Login
-        </button>
+      <nav>
+        <Navbar />
       </nav>
-      
 
-      <main className="flex-1 flex flex-col bg-blue-100">
-        <h2 className="font-bold text-4xl mb-4">Next steps</h2>
+      <main className="flex flex-row items-center justify-center space-x-24 px-20">
+        <Tagline />
+        <Card />
       </main>
 
+      <main className="flex flex-row items-center justify-center space-x-24">
+        <UserReview />
+      </main>
 
+      {/* <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
 
-      <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
-        <p>
-          Powered by{' '}
-          <a
-            href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-            target="_blank"
-            className="font-bold hover:underline"
-            rel="noreferrer"
-          >
-            Supabase
-          </a>
-        </p>
-      </footer>
+      </footer> */}
 
 
     </div>
