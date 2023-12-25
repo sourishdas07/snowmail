@@ -25,6 +25,23 @@ export default function Login({
       return redirect('/login?message=Could not authenticate user')
     }
 
+    // if it is the users first time logging in (i.e the user does not have a profile) redirect them to signup form
+    const { data: { user },} = await supabase.auth.getUser();
+
+    const { data, error: userProfileError  } = await supabase
+      .from('UserProfile')
+      .select('user')
+      .eq('user', user?.id)
+
+    if (userProfileError) {
+      return redirect('/login?message=Could not authenticate user')
+    }
+    
+    if (data.length === 0){
+      return redirect('/signup')
+    }
+    
+    // Otherwise, redirect to home page
     return redirect('/home')
   }
 
