@@ -56,7 +56,7 @@ export default function SignupForm(props : Props) {
       <h2 className="text-xl mb-10">Complete Signup Details To Get Started!</h2>
       <form onSubmit={handleSubmit} className="bg-sky-500 p-6 rounded-lg shadow-md text-white">
         <div className="mb-4">
-          <label htmlFor="firstname" className="block text-sm font-medium mb-1">Name:</label>
+          <label htmlFor="firstname" className="block text-sm font-medium mb-1">First Name:</label>
           <input
             type="text"
             id="firstname"
@@ -69,12 +69,38 @@ export default function SignupForm(props : Props) {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="school" className="block text-sm font-medium mb-1">School:</label>
+          <label htmlFor="lastname" className="block text-sm font-medium mb-1">Last Name:</label>
+          <input
+            type="text"
+            id="lastname"
+            name="lastname"
+            value={formData.lastname}
+            onChange={handleChange}
+            required
+            className="w-full px-3 py-2 text-black border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+          />
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="school" className="block text-sm font-medium mb-1">Most Recent Education:</label>
           <input
             type="text"
             id="school"
             name="school"
             value={formData.school}
+            onChange={handleChange}
+            required
+            className="w-full px-3 py-2 text-black border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+          />
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="major" className="block text-sm font-medium mb-1">Major:</label>
+          <input
+            type="text"
+            id="major"
+            name="major"
+            value={formData.major}
             onChange={handleChange}
             required
             className="w-full px-3 py-2 text-black border rounded-md focus:outline-none focus:ring focus:border-blue-300"
