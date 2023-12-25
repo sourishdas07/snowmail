@@ -1,7 +1,5 @@
-import DeployButton from '../components/DeployButton'
 import AuthButton from '../components/AuthButton'
 import { createClient } from '@/utils/supabase/server'
-import Header from '@/components/Header'
 import { cookies } from 'next/headers'
 import FetchData from '@/components/FetchData'
 import Navbar from '@/components/Navbar'
@@ -45,7 +43,6 @@ export default async function Index() {
       {/* <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
 
       </footer> */}
-
 
     </div>
   )
