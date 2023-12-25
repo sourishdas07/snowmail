@@ -6,8 +6,10 @@ import { useRouter } from 'next/navigation'
 
 interface FormData {
   firstname: string;
+  lastname: string;
   school: string;
-  gpa: string;
+  major: string;
+  gpa: number;
   user: string;
 }
 
@@ -18,8 +20,10 @@ interface Props {
 export default function SignupForm(props : Props) {
   const [formData, setFormData] = useState<FormData>({
     firstname: '',
+    lastname: '',
     school: '',
-    gpa: '',
+    major: '',
+    gpa: 0,
     user: props.userId,
   });
 
