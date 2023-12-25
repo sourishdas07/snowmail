@@ -8,9 +8,7 @@ export default function Navbar() {
         Snowmail
       </div>
       <div className="flex space-x-24 text-white-800">
-        <a href="#" className="hover:underline">Invest</a>
         <a href="#" className="hover:underline">Features</a>
-        <a href="#" className="hover:underline">Market</a>
         <a href="#" className="hover:underline">About Us</a>
       </div>
       <AuthButton />

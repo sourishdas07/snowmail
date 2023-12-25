@@ -7,21 +7,22 @@ import { User } from './entities/user.entity';
 export class UserService {
 
   // Temporary Array of Users
-  users: User[] = [];
+  private users: User[] = [];
 
-  createUser(id: number, firstname: string, email: string, school: string, major: string, gpa: number, username: string) {
-    const newUser = new User(id, firstname, email, school, major, gpa, username);
+  createUser(id: number, firstname: string, email: string, school: string, major: string, gpa: number, username: string) : number {
+    // Changing this later to ensure all users have unique ids
+    const userId: number = Math.random() * 100;
+    
+    const newUser = new User(userId, firstname, email, school, major, gpa, username);
     // Pushing the new user to the array
     this.users.push(newUser);
+    return userId;
   }
 
-  create(createUserDto: CreateUserDto) {
-    return 'This action adds a new user';
-  }
-
-  findAll() {
+  getAllUsers() {
     return `This action returns all user`;
   }
+  
 
   findOne(id: number) {
     return `This action returns a #${id} user`;

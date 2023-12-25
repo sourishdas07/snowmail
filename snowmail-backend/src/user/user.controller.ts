@@ -18,18 +18,8 @@ export class UserController {
     @Body('gpa') gpa: number,
     @Body('username') username: string,
   ): any {
-    this.userService.createUser(id, firstname, email, school, major, gpa, username);  
-  }
-
-
-  @Post()
-  create(@Body() createUserDto: CreateUserDto) {
-    return this.userService.create(createUserDto);
-  }
-
-  @Get()
-  findAll() {
-    return this.userService.findAll();
+    const generatedId = this.userService.createUser(id, firstname, email, school, major, gpa, username);  
+    return { id: generatedId };
   }
 
   @Get(':id')

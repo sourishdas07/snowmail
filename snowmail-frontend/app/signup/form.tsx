@@ -53,19 +53,31 @@ export default function SignupForm(props : Props) {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="name">Name:</label>
+        <label htmlFor="firstname">First Name:</label>
         <input
           type="text"
-          id="name"
-          name="name"
-          value={formData.name}
+          id="firstname"
+          name="firstname"
+          value={formData.firstname}
           onChange={handleChange}
           required
         />
       </div>
 
       <div>
-        <label htmlFor="school">School:</label>
+        <label htmlFor="lastname">Last Name:</label>
+        <input
+          type="text"
+          id="lastname"
+          name="lastname"
+          value={formData.lastname}
+          onChange={handleChange}
+          required
+        />
+      </div>
+
+      <div>
+        <label htmlFor="school">Most Recent Education:</label>
         <input
           type="text"
           id="school"
@@ -77,9 +89,21 @@ export default function SignupForm(props : Props) {
       </div>
 
       <div>
-        <label htmlFor="gpa">GPA:</label>
+        <label htmlFor="school">Major:</label>
         <input
           type="text"
+          id="major"
+          name="major"
+          value={formData.major}
+          onChange={handleChange}
+          required
+        />
+      </div>
+
+      <div>
+        <label htmlFor="gpa">GPA:</label>
+        <input
+          type="float8"
           id="gpa"
           name="gpa"
           value={formData.gpa}
