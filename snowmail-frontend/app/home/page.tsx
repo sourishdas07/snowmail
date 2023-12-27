@@ -14,8 +14,29 @@ export default async function Home() {
     }
 
   return (
-    <div>
-        Welcome {user.email}!
+    <div className="flex-1 w-full flex bg-gradient-to-tr from-white from-35% to-sky-300 h-full">
+
+      <div className="bg-white flex-col justify-between items-center px-10 py-2 w-1/5 h-full">
+        
+        <div className="text-4xl font-bold text-gray-800 mt-2">
+          Snowmail
+        </div>
+
+        <div className='mt-5'>
+          <div>
+            <a href="#" className="hover:underline">Dashboard</a>
+          </div>
+
+          <div className='mt-3'>
+            <a href="#" className="hover:underline">Profile</a>
+          </div>
+        </div>
+        
+      </div>
+
+      Welcome {user.email}!
+
+
     </div>
   )
 }
