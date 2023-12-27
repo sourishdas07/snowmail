@@ -12,15 +12,6 @@ export class EmailService {
     const openai = new OpenAI();
   }
 
-  async generateEmail(prompt: string): Promise<string> {
-    const response = await openai.Completion.create({
-      engine: 'text-davinci-002',
-      prompt,
-      max_tokens: 300,
-      temperature: 0.7,
-    });
-
-    return response.choices[0].text.trim();
-  }
+  // TODO: Implement OpenAI API
 
 }
