@@ -1,6 +1,8 @@
 import { cookies } from 'next/headers'
 import { createClient } from '@/utils/supabase/server'
 import { redirect } from 'next/navigation'
+import SignupForm from '../signup/form'
+import EmailGenerationForm from './form'
 
 export default async function Home() {
     const cookieStore = cookies()
@@ -36,6 +38,10 @@ export default async function Home() {
 
       Welcome {user.email}!
 
+      {/* Email Generation Form Needs Editing */}
+      <div>
+        <EmailGenerationForm userId={user.id}/>
+      </div>
 
     </div>
   )

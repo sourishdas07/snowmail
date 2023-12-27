@@ -1,13 +1,15 @@
 import { Injectable } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { Email } from './entities/email.entity';
 import OpenAI from "openai";
 
+
 @Injectable()
 export class EmailService {
-  private readonly openaiApiKey = '';
-
-  constructor() {
-    OpenAI.apiKey = this.openaiApiKey;
+  constructor(
+    private readonly configService: ConfigService,
+  ) {
+    const openai = new OpenAI();
   }
 
   async generateEmail(prompt: string): Promise<string> {
