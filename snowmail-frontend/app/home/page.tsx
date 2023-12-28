@@ -3,6 +3,7 @@ import { createClient } from '@/utils/supabase/server'
 import { redirect } from 'next/navigation'
 import SignupForm from '../signup/form'
 import EmailGenerationForm from './form'
+import HomeSidebar from '@/components/Sidebar'
 
 export default async function Home() {
     const cookieStore = cookies()
@@ -16,31 +17,19 @@ export default async function Home() {
     }
 
   return (
-    <div className="flex-1 w-full flex bg-gradient-to-tr from-white from-35% to-sky-300 h-full">
-
-      <div className="bg-white flex-col justify-between items-center px-10 py-2 w-1/5 h-full">
-        
-        <div className="text-4xl font-bold text-gray-800 mt-2">
-          Snowmail
-        </div>
-
-        <div className='mt-5'>
-          <div>
-            <a href="#" className="hover:underline">Dashboard</a>
-          </div>
-
-          <div className='mt-3'>
-            <a href="#" className="hover:underline">Profile</a>
-          </div>
-        </div>
-        
+    <div className="grid grid-cols-6 gap-4 bg-gradient-to-tr from-white from-35% to-sky-300">
+      <div className="col-span-1">
+        <HomeSidebar />
       </div>
 
-      Welcome {user.email}!
-
-      {/* Email Generation Form Needs Editing */}
-      <div>
-        <EmailGenerationForm userId={user.id}/>
+      <div className="col-span-5 flex flex-col items-center h-full">
+        <div className="h-1/6">
+          <h1 className="text-xl p-7">Welcome {user.email}!</h1>
+        </div>
+        <div className="h-5/6">
+          {/* Email Generation Form Needs Editing */}
+          <EmailGenerationForm userId={user.id}/>
+        </div>
       </div>
 
     </div>
