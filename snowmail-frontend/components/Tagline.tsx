@@ -1,12 +1,39 @@
-export default function Tagline() {
-    return (
+import { createClient } from '@/utils/supabase/server'
+import Link from 'next/link'
+import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
+
+export default async function Tagline() {
+    const cookieStore = cookies()
+    const supabase = createClient(cookieStore)
+
+    const {
+        data: { user },
+    } = await supabase.auth.getUser()
+
+    return user? (
         <div className="mt-32 rounded-lg w-1/2">
-            <h1 className="text-4xl pb-5">Find your dream job with our help</h1>
-            <p className="pb-5">No longer spend hours writing emails to recruiters, instead spend that time on your personal development</p>
-            
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                Join Today
-            </button>
+            <h1 className="text-6xl pb-5">Find your dream job with our help</h1>
+            <p className="text-lg pb-5">No longer spend hours writing emails to recruiters, instead spend that time on your personal development</p>
+                        
+            <Link
+                href="/home"
+                className="py-3 px-4 rounded-md no-underline bg-btn-background hover:bg-btn-background-hover"
+            >
+                Dashboard
+            </Link>
         </div>
-      );
+    ) : (
+        <div className="mt-32 rounded-lg w-1/2">
+            <h1 className="text-6xl pb-5">Find your dream job with our help</h1>
+            <p className="text-lg pb-5">No longer spend hours writing emails to recruiters, instead spend that time on your personal development</p>
+                        
+            <Link
+                href="/login"
+                className="py-3 px-4 rounded-md no-underline bg-btn-background hover:bg-btn-background-hover"
+            >
+                Join Today
+            </Link>
+        </div>
+    )
 }

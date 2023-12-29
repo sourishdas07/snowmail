@@ -1,6 +1,9 @@
 {
   "dependencies": {
+    "@nestjs-modules/mailer": "^1.10.3",
     "@nestjs/cli": "^10.2.1",
+    "flowbite-react": "^0.7.2",
+    "nodemailer": "^6.9.7",
     "npm": "^10.2.5",
     "openai": "^4.24.1"
   }

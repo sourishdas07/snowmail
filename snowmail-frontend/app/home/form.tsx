@@ -52,9 +52,9 @@ export default function EmailGenerationForm(props : Props) {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center">
       
-      <h2 className="text-xl mb-10">SAMPLE TEXT</h2>
+      <h2 className="text-xl">Generate Snowmail!</h2>
 
       <form onSubmit={handleSubmit} className="p-6 rounded-lg text-black">
         <div className="mb-4">

@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar'
 import Card from '@/components/Card'
 import Tagline from '@/components/Tagline'
 import UserReview from '@/components/UserReview'
+import Footer from '@/components/Footer'
 
 export default async function Index() {
   const cookieStore = cookies()
@@ -26,24 +27,18 @@ export default async function Index() {
   return (
     <div className="flex-1 w-full flex flex-col bg-gradient-to-tr from-white from-35% to-sky-300">
 
-      {/* Home Screen Navbar */}
-      <nav>
-        <Navbar />
-      </nav>
+      <Navbar />
 
       <main className="flex flex-row items-center justify-center space-x-24 px-20">
         <Tagline />
         <Card />
       </main>
 
-      <main className="flex flex-row items-center justify-center space-x-24">
+      <main className="flex flex-row items-center justify-center space-x-24 mt-16 mb-12">
         <UserReview />
       </main>
 
-      {/* <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
-
-      </footer> */}
-
+      <Footer />
     </div>
   )
 }

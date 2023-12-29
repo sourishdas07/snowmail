@@ -3,7 +3,7 @@ import AuthButton from "./AuthButton";
 
 export default function Navbar() {
   return (
-    <div className="flex justify-between items-center px-20 py-2 bg-gradient-to-r from-sky-200 from-40% to-sky-100">
+    <div className="flex justify-between items-center px-20 py-4">
       <div className="text-4xl font-bold text-gray-800">
         Snowmail
       </div>
