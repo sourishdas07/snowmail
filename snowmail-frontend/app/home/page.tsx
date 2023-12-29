@@ -25,7 +25,6 @@ export default async function Home() {
 
       <div className="col-span-5 flex flex-col h-full">
 
-        
         <div className="h-1/6 flex">
           <h1 className="text-xl p-7">Welcome {user.email}!</h1>
         </div>
@@ -38,8 +37,6 @@ export default async function Home() {
                 Logout
             </Link>
         </div>
-
-
 
         <div className="h-5/6">
           {/* Email Generation Form Needs Editing */}
