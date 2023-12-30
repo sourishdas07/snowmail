@@ -18,7 +18,6 @@ export class AppService {
     private readonly configService: ConfigService,
   ) {}
 
-
   getHello(): string {
     return 'Hello Worldsssssss!';
   }
@@ -44,6 +43,7 @@ export class AppService {
     } catch (error) {
       console.log(error)
     }
-
   }
+
+
 }

@@ -7,6 +7,7 @@ import Card from '@/components/Card'
 import Tagline from '@/components/Tagline'
 import UserReview from '@/components/UserReview'
 import Footer from '@/components/Footer'
+import Reviews from '@/components/Reviews'
 
 export default async function Index() {
   const cookieStore = cookies()
@@ -34,8 +35,9 @@ export default async function Index() {
         <Card />
       </main>
 
-      <main className="flex flex-row items-center justify-center space-x-24 mt-16 mb-12">
+      <main className="flex flex-row items-center justify-center space-x-24 mt-8 mb-12">
         <UserReview />
+        {/* <Reviews /> */}
       </main>
 
       <Footer />
