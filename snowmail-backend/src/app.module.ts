@@ -5,6 +5,8 @@ import { UserDataController } from './data/data.controller';
 import { UserModule } from './user/user.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MailerModule } from '@nestjs-modules/mailer';
+import { ChatCompletionApiModule } from './chat-completion-api/chat-completion-api.module';
+// import { ChatGptAiModule } from './chat-gpt-ai/chat-gpt-ai.module'; // Add this line
 
 @Module({
   imports: [
@@ -14,7 +16,6 @@ import { MailerModule } from '@nestjs-modules/mailer';
       inject: [ConfigService],
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => ({
-
         // Change these when doing actual implementations 
         // Only works in mailtrap for now
         transport: {
@@ -30,16 +31,19 @@ import { MailerModule } from '@nestjs-modules/mailer';
           from: configService.get<string>('MAIL_SENDER'),
         }
       })
-    })
+    }),
+    // ChatGptAiModule,
+    ChatCompletionApiModule
   ],
 
   controllers: [
     AppController, 
-    UserDataController
+    UserDataController,
   ],
   
   providers: [
-    AppService
+    AppService,
   ],
 })
 export class AppModule {}
+
