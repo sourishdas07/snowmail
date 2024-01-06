@@ -3,7 +3,7 @@ export default function UserReview() {
       <div className="flex">
         <div className="flex flex-col items-center my-20 w-1/2">
           <img
-            src="/opengraph-image.png"
+            src="/components/user-reviews/drake.jpg"
             alt={`profile`}
             className="w-40 h-40 rounded-full mb-4"
           />
@@ -32,7 +32,7 @@ export default function UserReview() {
             className="w-40 h-40 rounded-full mb-4"
           />
             <div className="flex items-center mb-2">
-                <span className="text-xl font-semibold">Sourya Pennuru</span>
+                <span className="text-xl font-semibold">Ved Patel</span>
             </div>
             <div className="flex flex-row">
                 {Array.from({ length: 5 }, (_, index) => (
@@ -56,7 +56,7 @@ export default function UserReview() {
             className="w-40 h-40 rounded-full mb-4"
           />
             <div className="flex items-center mb-2">
-                <span className="text-xl font-semibold">Sourya Pennuru</span>
+                <span className="text-xl font-semibold">Jeevsidak Singh</span>
             </div>
             <div className="flex flex-row">
                 {Array.from({ length: 5 }, (_, index) => (

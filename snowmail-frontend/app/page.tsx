@@ -35,7 +35,7 @@ export default async function Index() {
         <Card />
       </main>
 
-      <main className="flex flex-row items-center justify-center space-x-24 mt-8 mb-12">
+      <main className="flex flex-col items-center justify-center space-x-24 mt-12 mb-12">
         <UserReview />
         {/* <Reviews /> */}
       </main>

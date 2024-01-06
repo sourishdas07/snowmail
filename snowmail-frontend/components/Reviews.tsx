@@ -4,7 +4,7 @@ import React from 'react'
 import SouryaPenneru from './user-reviews/SouryaPenneru';
 
 
-const Projects = () => {
+const UserReviews = () => {
   return (
     <div className='flex flex-col relative h-screen top-10 md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
       <div className="w-full flex space-x-5 overflow-x-auto p-10 mt-8">
@@ -18,4 +18,4 @@ const Projects = () => {
   );  
 };
 
-export default Projects
+export default UserReviews
