@@ -13,9 +13,3 @@
 - Backend: NestJs
 - Database: Supabase
 
-# Tasks
-
-- Finish Figma Layout
-- Implement Figma layout for Main page, and home page of a user
-- Protect routes to signup page, and show signup page after signing up
-- Add ability to store resume in database
