@@ -1,4 +1,4 @@
-# snowmail
+# Snowmail
 
 # Main Functionality
 
