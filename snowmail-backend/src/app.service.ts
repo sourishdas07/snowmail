@@ -19,7 +19,7 @@ export class AppService {
   ) {}
 
   getHello(): string {
-    return 'Hello Worldsssssss!';
+    return 'Hello World!';
   }
 
   async sendEmail(dto:SendEmailDto) {

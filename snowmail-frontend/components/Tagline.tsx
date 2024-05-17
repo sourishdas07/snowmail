@@ -28,11 +28,18 @@ export default async function Tagline() {
             <h1 className="text-6xl pb-5">Find your dream job with our help</h1>
             <p className="text-lg pb-5">No longer spend hours writing emails to recruiters, instead spend that time on your personal development</p>
                         
-            <Link
+            {/* <Link
                 href="/login"
                 className="py-3 px-4 rounded-md no-underline bg-btn-background hover:bg-btn-background-hover"
             >
                 Join Today
+            </Link> */}
+
+            <Link
+                href=""
+                className="py-3 px-4 rounded-md no-underline bg-btn-background hover:bg-btn-background-hover"
+            >
+                Try Our Beta Release
             </Link>
         </div>
     )

@@ -3,7 +3,7 @@ export default function UserReview() {
       <div className="flex">
         <div className="flex flex-col items-center my-20 w-1/2">
           <img
-            src="/components/user-reviews/drake.jpg"
+            src="/sourya.jpeg"
             alt={`profile`}
             className="w-40 h-40 rounded-full mb-4"
           />
@@ -22,12 +22,12 @@ export default function UserReview() {
                     </svg>
                 ))}
             </div>
-            <p className="italic text-gray-700 w-1/2 text-center">I was able to land my first internship using Snowmail! If you are looking for an internship, and are tired of manually cold emailing, I would recommend Snowmail! </p>
+            <p className="italic text-gray-700 w-1/2 text-center">After using Snowmail, I was able to increase my grades after saving countless hours a week I would have used for networking.</p>
         </div>
 
         <div className="flex flex-col items-center my-20 w-1/2">
           <img
-            src="/opengraph-image.png"
+            src="/ved.jpeg"
             alt={`profile`}
             className="w-40 h-40 rounded-full mb-4"
           />
@@ -51,7 +51,7 @@ export default function UserReview() {
 
         <div className="flex flex-col items-center my-20 w-1/2">
           <img
-            src="/opengraph-image.png"
+            src="/jeevs.jpeg"
             alt={`profile`}
             className="w-40 h-40 rounded-full mb-4"
           />
@@ -70,7 +70,7 @@ export default function UserReview() {
                     </svg>
                 ))}
             </div>
-            <p className="italic text-gray-700 w-1/2 text-center">I was able to land my first internship using Snowmail! If you are looking for an internship, and are tired of manually cold emailing, I would recommend Snowmail! </p>
+            <p className="italic text-gray-700 w-1/2 text-center">After struggling to get responses from recruiters through manual emails, I switched to using Snowmail and immediately saw results.</p>
         </div>
 
       </div>
